@@ -1,0 +1,50 @@
+{
+  "name": "egydata",
+  "version": "1.0.0",
+  "description": "Structured Egyptian geographical and timezone data — governorates, cities, phone area codes, and timezone utilities.",
+  "main": "./src/index.js",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./src/index.js"
+    }
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "egypt",
+    "egyptian",
+    "governorates",
+    "cities",
+    "geography",
+    "timezone",
+    "phone",
+    "area-codes",
+    "cairo",
+    "africa",
+    "arabic",
+    "محافظات",
+    "مصر"
+  ],
+  "author": "Ahmed Ashraf <ahmdgun0@gmail.com> (https://github.com/ahmed-ashraf-dv)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmed-ashraf-dv/egydata.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmed-ashraf-dv/egydata/issues"
+  },
+  "homepage": "https://github.com/ahmed-ashraf-dv/egydata#readme",
+  "files": [
+    "src/",
+    "index.mjs",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
